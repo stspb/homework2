@@ -1,0 +1,19 @@
+{
+    "name": "st/lesson2_hw",
+    "description": "Homework2",
+    "require": {
+        "guzzlehttp/guzzle": "^7.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "authors": [
+        {
+            "name": "st",
+            "email": "s.chirkin@mail1.pro"
+        }
+    ],
+    "autoload": {
+        "psr-4": {"Homework2\\": "src/"}
+    }
+}
