@@ -1,5 +1,5 @@
 {
-    "name": "st/lesson2_hw",
+    "name": "stspb/lesson2_hw",
     "description": "Homework2",
     "require": {
         "guzzlehttp/guzzle": "^7.3"
@@ -9,8 +9,8 @@
     },
     "authors": [
         {
-            "name": "st",
-            "email": "s.chirkin@mail1.pro"
+            "name": "stspb",
+            "email": "st.smiles@gmail.com"
         }
     ],
     "autoload": {
