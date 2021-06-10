@@ -7,14 +7,19 @@ class Calculate
 {
     public function execute($str)
     {
-        $str = $this->removeSubstr($str);
-        var_dump($str);
+        $pattern = ["/\\\\n/", "/\\\\r/", "/\\\\t/", "/\s/"];
+        $replacement = "";
+        $str = preg_replace($pattern, $replacement, $str);
+        if (preg_match_all('/[^\(^\)]/', $str, $matches)) {
+            throw new \InvalidArgumentException('Лишние символы!');
+        }
+
+        return preg_match_all('/\(/', $str, $matches) === preg_match_all('/\)/', $str, $matches);
     }
 
-    public static function removeSubstr($str)
+    public function readFromFile($path)
     {
-        $pattern = ['/\n/'];
-        $replacement = "";
-        return preg_replace($pattern, $replacement, $str);
+        if (!$path) return;
+        return file_get_contents($path);
     }
 }
